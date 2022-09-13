@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -8,12 +7,11 @@ export default function Home() {
         <title>SeeFi: Trade web3 domain assets freely</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main>
         <header>
           <div className="wrapper">
               <a href="/" className="StyledLinkLogo">
-                <img src="/images/seefi.png" alt="SeeFi"/>
+                <div alt="SeeFi" className="seefi-logo" ></div>
                 <strong>SeeFi</strong>
               </a>
             
@@ -35,7 +33,6 @@ export default function Home() {
             <div className="bluecube">
               <img src="/images/bluecube.png"></img>
             </div>
-            
             <div className="project-intro">
               <h2 className="intro-title">SeeFi</h2>
               <p className="intro-detail">A universal name service network connects people,information,and assets across all blockchains and dapps</p>
@@ -44,7 +41,6 @@ export default function Home() {
         </section>
         
       </main>
-
       <footer>
         <a href="/" target="_blank">
           Powered by{' '}
@@ -89,9 +85,18 @@ export default function Home() {
           justify-content: space-between;
           align-items: center;
           max-width: 1150px;
+          padding-right: 24px;
+          padding-left: 20px;
         }
         .StyledLinkLogo {
           font-size: 0px;
+        }
+        .seefi-logo {
+          width: 114px;
+          height: 40px;
+          background-image: url(images/seefi.png);
+          background-repeat: no-repeat;
+          background-size: cover;
         }
         .rightContainer {
           display: flex;
@@ -155,6 +160,7 @@ export default function Home() {
         .project-intro {
           margin: 0px;
         }
+        
         .intro-title {
           font-weight: 700;
           font-size: 55px;
@@ -199,107 +205,56 @@ export default function Home() {
         ::-moz-placeholder { color: ##999999; font-size: 18px; }
         ::-webkit-input-placeholder { color: #999999;font-size: 18px; }
         :-ms-input-placeholder { color:#999999;font-size: 18px; }
-        @media (max-width: 600px) {
-          .container {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        @media(max-width: 600px) {
+          article {
+            background-image:url(images/h5-bluecube.png);
+            background-size:cover;
           }
-  
-          main {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-          }
-  
-          header {
-            display: flex;
-            justify-content: space-around;
-            box-shadow: rgb(0 0 0 / 12%) 0px 1px 1px;
-            height: 60px;
-            width: 100%;
-            top: 0px;
-            position: fixed;
-            align-items: center;
-            background: rgb(255, 255, 255);
-            z-index: 1000;
-          }
-          .wrapper {
-            width: 100%;
-            display: flex;
-            height: 100%;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1150px;
-          }
-          .StyledLinkLogo {
-            font-size: 0px;
-          }
-          .rightContainer {
-            display: flex;
-            flex-direction: row;
-            -webkit-box-align: center;
-            align-items: center;
-            position: relative;
+          .seefi-logo {
+            width: 68px;
+            height: 22px;
+            background-image: url(images/h5-logo.png);
+            background-repeat: no-repeat;
+            background-size: cover;
           }
           .socialmedia {
-            min-width: 120px;
             cursor: pointer;
-            height: 30px;
+            height: 18px;
             display: flex;
             align-items: center;
             justify-content: center;
           }
           .socialmedia-logo {
-            height: 28px;
-            width: 28px;
-            margin-right: 10px;
+            height: 18px;
+            width: 18px;
+            margin-right: 5px;
           }
           .logo-text {
             color: #333333;
             font-style: normal;
             font-weight: 600;
-            font-size: 16px;
+            font-size: 0.9rem;
             line-height: 22px;
           }
           .community {
-            margin-left: 48px;
+            margin-left: 15px;
             cursor: pointer;
-            height: 30px;
+            height: 18px;
             display: flex;
             align-items: center;
             justify-content: center;
           }
           .community-logo {
-            height: 30px;
-            width: 30px;
-            margin-right: 10px;
-          }
-          section {
-            margin-top: 60px;
-            display: flex;
-            width: 100vw;
-            max-width: 1150px;
-            justify-content: space-between;
-            align-self: center;
-            flex: 1 1 auto;
-          }
-          article {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+            height: 18px;
+            width: 18px;
+            margin-right: 5px;
           }
           .bluecube {
-            object-fit: cover;
+            display: none;
           }
           .project-intro {
-            margin: 0px;
+            margin: 0px 20px;
+            width: 100vw;
           }
           .intro-title {
             font-weight: 700;
@@ -313,28 +268,11 @@ export default function Home() {
             line-height: 33px;
             color: #333333;
             margin-bottom: 29px;
+            width: 240px;
           }
-          footer {
-            width: 100%;
-            height: 100px;
-            border-top: 1px solid #eaeaea;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-  
-          footer img {
-            margin-left: 0.5rem;
-          }
-  
-          footer a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-
-          .logo {
-            height: 1.5em;
+          * {
+            box-sizing: border-box;
+            overflow: hidden;
           }
         }
       `}</style>
