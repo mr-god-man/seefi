@@ -35,7 +35,7 @@ export default function Home() {
             </div>
             <div className="project-intro">
               <h2 className="intro-title">SeeFi</h2>
-              <p className="intro-detail">A universal name service network connects people,information,and assets across all blockchains and dapps</p>
+              <p className="intro-detail">Buy, trade, and hold variety of web3 domains on the world’s leading one-stop domain trading platform</p>
             </div>
           </article>
         </section>
